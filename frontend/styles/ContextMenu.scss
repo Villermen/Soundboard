@@ -1,0 +1,78 @@
+// TODO: Theme ContextMenu styles
+
+.ContextMenuLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    background: rgba(black, 0.1);
+}
+
+.ContextMenu {
+    width: 240px;
+    padding: 10px;
+
+    background: white;
+    border-radius: 3px;
+    box-shadow:
+        0 3px 15px rgba(black, 0.1),
+        0 1px 2px rgba(black, 0.15);
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        display: block;
+    }
+}
+
+.ContextMenuItem {
+    display: flex;
+    align-items: baseline;
+
+    width: 100%;
+    padding: 10px;
+
+    background: none;
+    border: none;
+    font: inherit;
+
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background: darken(white, 5%);
+    }
+    &:active {
+        background: darken(white, 10%);
+    }
+
+    &:disabled {
+        color: inherit;
+        opacity: 0.3;
+        background: none;
+        cursor: default;
+    }
+
+    &__title {
+        margin-right: auto;
+
+        font-weight: 500;
+    }
+
+    &__shortcut {
+        margin-left: 20px;
+
+        font-size: 14px;
+    }
+}

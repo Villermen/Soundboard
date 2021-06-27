@@ -1,0 +1,40 @@
+.SearchBar {
+    position: relative;
+    height: 60px;
+
+    &__input {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 0;
+        border-radius: 2px;
+
+        font: inherit;
+        font-weight: 500;
+
+        background: var(--search-bar-bg);
+        color: var(--search-bar-color);
+
+        &::placeholder {
+            color: var(--search-bar-placeholder-color);
+        }
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            -webkit-appearance:none;
+        }
+    }
+
+    &__clear {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        margin: auto;
+
+        height: 40px;
+    }
+}

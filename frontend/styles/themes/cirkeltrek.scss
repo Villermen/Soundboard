@@ -1,0 +1,13 @@
+[data-theme='cirkeltrek'] {
+    $header-bg: #e27000;
+    $header-color: #fff;
+
+    --header-bg: #{$header-bg};
+    --header-color: #{$header-color};
+
+    --icon-button-header-color: #{$header-color};
+    --icon-button-header-bg-hover: #{rgba($header-color, 0.1)};
+    --icon-button-header-color-hover: #{$header-color};
+    --icon-button-header-bg-active: #{rgba($header-color, 0.15)};
+    --icon-button-header-color-active: #{$header-color};
+}

@@ -1,6 +1,8 @@
 /public/build/
 /public/config.json
 /public/index.html
+/.cache/
+/.parcel-cache/
 
 # Sample files (we got that sweet copyright on our own voices)
 /samples/*

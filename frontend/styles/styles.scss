@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'themes/default';
+@import 'themes/cirkeltrek';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    font: 16px $font-stack;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@import 'Header';
+@import 'SearchBar';
+@import 'IconButton';
+@import 'SampleList';
+@import 'SampleItem';
+@import 'ContextMenu';
+@import 'Modal';

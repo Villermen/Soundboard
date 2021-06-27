@@ -1,0 +1,88 @@
+@import 'variables';
+
+.SampleItem {
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    max-width: calc(100% - #{2 * $sampleMargin});
+    height: $sampleHeight;
+    margin: $sampleMargin;
+    padding: 0 $samplePaddingX;
+
+    border: 0;
+    border-radius: 2px;
+    background: var(--sample-bg);
+    color: var(--sample-color);
+    cursor: pointer;
+
+    user-select: none;
+
+    &:hover {
+        background: var(--sample-bg-hover);
+    }
+    &:active {
+        background: var(--sample-bg-active);
+    }
+    &:focus {
+        outline: 2px solid black;
+        outline-offset: 2px;
+    }
+
+    &--isPlaying {
+        background: var(--sample-playing-bg);
+        color: var(--sample-playing-color);
+        &:hover {
+            background: var(--sample-playing-bg-hover);
+        }
+        &:active {
+            background: var(--sample-playing-bg-active);
+        }
+    }
+
+    &__name,
+    &__detail {
+        position: relative;
+        z-index: 3;
+
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__name {
+        font: $nameFont;
+    }
+    &__detail {
+        font: $detailFont;
+    }
+
+    &__progress {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--sample-progress-bg);
+
+        transform-origin: 0 0;
+    }
+
+    &__visualize {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.3;
+    }
+}

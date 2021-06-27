@@ -1,0 +1,41 @@
+@import 'variables';
+
+.SampleList {
+    flex: 1 0 auto;
+
+    // Use padding-bottom instead of margin-bottom, since margin tends to get
+    // cut off at the end of a flex container.
+    margin: $sampleListPadding $sampleListPadding 0;
+    padding-bottom: $sampleListPadding;
+
+    background: var(--sample-list-bg);
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__pusher {
+        flex: 10 0 auto;
+    }
+
+    // No results
+    &__noResults {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+
+        color: var(--no-results-color);
+    }
+
+    &__noResultsIcon {
+        margin-bottom: 10px;
+
+        color: var(--no-results-icon-color);
+    }
+}

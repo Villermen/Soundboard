@@ -1,0 +1,47 @@
+.IconButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    &--search {
+        color: var(--icon-button-search-color);
+
+        &:hover,
+        &:focus {
+            background-color: var(--icon-button-search-bg-hover);
+        }
+        &:active {
+            background-color: var(--icon-button-search-bg-active);
+        }
+    }
+
+    &--header {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+
+        color: var(--icon-button-header-color);
+
+        &:hover,
+        &:focus {
+            background-color: var(--icon-button-header-bg-hover);
+            color: var(--icon-button-header-color-hover);
+        }
+        &:active {
+            background-color: var(--icon-button-header-bg-active);
+            color: var(--icon-button-header-color-active);
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import 'variables';
+
+$header-height: 80px;
+
+.Header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-areas: "title search buttons";
+    grid-template-columns: auto 50% auto;
+    column-gap: 15px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: $header-height;
+
+    background: var(--header-bg);
+    color: var(--header-color);
+
+    &__title {
+        margin: 0;
+        grid-area: title;
+
+        font-family: $title-font-family;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    &__search {
+        grid-area: search;
+    }
+
+    &__buttons {
+        grid-area: buttons;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__pusher {
+        flex: 0 0 $header-height;
+    }
+}
